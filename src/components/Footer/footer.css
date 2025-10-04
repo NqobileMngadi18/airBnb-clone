@@ -1,0 +1,137 @@
+/* .footer {
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+gap: 24px;
+background-color: var(--white);
+width: 100%;
+height: 48px;
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+}
+
+.footer-items1 {
+
+display: flex;
+justify-content: start;
+flex-direction: row;
+align-items: center;
+padding: 0px;
+gap: 8px;
+
+margin: 0 auto;
+width: 328px;
+height: 20px;
+
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.footer-copyright {
+display: flex;
+width: 130px;
+height: 20px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+
+color: #4B5563;
+
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.footer-items {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.footer-items span {
+  margin-right: 0.5rem;
+} */
+
+.footer {
+    display: flex;
+    justify-content: space-between; /* Left & Right alignment */
+    align-items: center;          /* Add breathing space */
+    border-top: 1px solid #e5e7eb;  /* Light gray divider */
+    background-color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    width: 100%;
+    color: #4B5563;
+    box-sizing: border-box;
+}
+
+/* LEFT SIDE */
+.footer-items1 {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* space between copyright and links */
+}
+
+.footer-copyright {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: #6b7280; /* lighter gray */
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 14px;
+  color: #4B5563;
+  cursor: pointer;
+}
+
+.footer-links p:hover {
+  text-decoration: underline;
+}
+
+/* RIGHT SIDE */
+.footer-items2 {
+  display: flex;
+  align-items: center;
+  /* gap: 0.8rem; */
+  font-size: 14px;
+  color: #4B5563;
+  cursor: pointer;
+}
+
+.footer-items2 span {
+  margin: 0 0.3rem;
+}
+
+.footer-items2 svg {
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-items2 svg:hover {
+  color: #000;
+}

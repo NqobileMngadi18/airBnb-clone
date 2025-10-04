@@ -1,24 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { AuthProvider, useAuth } from "./context/AuthContext";
+import HomePage from "./pages/Home/HomePage";
+import LoginPage from "./pages/Auth/LoginPage";
+import CreateListing from "./pages/Dashboard/Createlisting";
+import Listings from "./pages/Dashboard/Listings";
+import UpdateListing from "./pages/Dashboard/UpdateListing";
+import ReservationsPage from "./pages/Reservations/ReservationsPage";
+
+function PrivateRoute({ children }) {
+  const { user } = useAuth();
+  return user ? children : <LoginPage />;
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AuthProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/login" element={<LoginPage />} />
+          <Route
+            path="/create-listing"
+            element={
+              <PrivateRoute>
+                <CreateListing />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/listings/:id"
+            element={
+              <PrivateRoute>
+                <Listings />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/update-listing/:id"
+            element={
+              <PrivateRoute>
+                <UpdateListing />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/reservations"
+            element={
+              <PrivateRoute>
+                <ReservationsPage />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+      </Router>
+    </AuthProvider>
   );
 }
 

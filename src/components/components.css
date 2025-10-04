@@ -1,0 +1,98 @@
+.hero-banner {
+  position: relative;          /* so text can be placed above image */
+  width: 100%;
+  height: 500px;               /* adjust as you like */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 1rem;         /* Airbnb-style rounded edges */
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;           /* makes image cover the whole banner */
+  filter: brightness(70%);     /* darken slightly so text is readable */
+}
+
+.hero-banner-text {
+  position: absolute;          /* place text above image */
+  text-align: center;
+  color: white;
+  z-index: 2;
+}
+
+.hero-banner-text h1 {
+  font-size: 1rem;
+  height: 56px;
+  width: 701px;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero-banner-text button {
+  /* Big Card */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+align-items: center;
+background-color: white;
+/* padding: 80px;
+gap: 24px; */
+
+width: 129px;
+height: 56px;
+
+border-radius: 50px;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+
+}
+
+.hero-banner-text button p {
+/* Text */
+
+width: 81px;
+height: 24px;
+
+/* text-base/Medium */
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+/* identical to box height, or 24px */
+display: flex;
+align-items: center;
+
+background: linear-gradient(90deg, #671296 -1.23%, #9E1F83 100.62%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+/* text-fill-color: transparent; */
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+
+.hero-banner-text button:hover {
+  background-color: #f7f7f7;
+  transform: scale(1.05);
+}
+
+/* LocationCard */
+
+.container {
+    height: 1500px;
+    width: 100%;
+}

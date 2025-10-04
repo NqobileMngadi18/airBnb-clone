@@ -1,0 +1,85 @@
+.login-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  padding: 20px;
+  /* border: 1px solid #ccc; */
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+
+.login-container {
+    /* Rectangle 17 */
+
+position: absolute;
+width: 100%;
+height: 100%;
+
+background: white;
+}
+
+.login-header {
+    /* background: blue; */
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-container {
+    margin: 0;
+    padding-right: 10px;
+}
+
+.logo-container {
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form,div {
+    margin-top: 10px;
+}
+
+.input p {
+    width: 35px;
+    height: 10px;
+    color: rgb(35, 35, 247);
+}
+
+input {
+    width: 350px;
+    height: 30px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-button {
+    color: rgb(250, 250, 250);
+    background-color: rgb(35, 35, 247);
+    align-self: center;
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 50px;
+}
+.login-button p {
+    justify-self: center;
+    align-self: center;
+    padding-bottom: 50px;
+    font-size: 1rem;
+    color: pink;
+    padding-left: 10px;
+    text-align: center;
+}
+.reset {
+    color: rgb(35, 35, 247);
+}
