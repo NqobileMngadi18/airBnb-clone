@@ -1,0 +1,284 @@
+/* 2024 Airbnb LoginPage Styles */
+.login-container {
+  min-height: 100vh;
+  background: white;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Login Header */
+.login-header {
+  border-bottom: 1px solid #ebebeb;
+  padding: 16px 0;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.login-header .navbar-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.login-header .navbar-logo {
+  height: 32px;
+  width: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.login-header .navbar-logo:hover {
+  opacity: 0.8;
+}
+
+.login-header .profile-container {
+  display: flex;
+  align-items: center;
+  /*position: relative;*/
+  margin-left: auto;
+}
+
+/* Profile Menu Positioning */
+.login-header .profile-div {
+  /*position: relative;*/
+  z-index: 1001;
+  float: right;
+}
+
+/* Login Form Container */
+.login-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  max-width: 568px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.login-form h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.login-form form {
+  width: 100%;
+  background: white;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Input Groups */
+.input {
+  margin-bottom: 24px;
+}
+
+.input p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.input input {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid #b0b0b0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  background: white;
+  box-sizing: border-box;
+}
+
+.input input:focus {
+  outline: none;
+  border-color: #222;
+  box-shadow: 0 0 0 2px rgba(34, 34, 34, 0.1);
+}
+
+.input input::placeholder {
+  color: #717171;
+}
+
+/* Reset Password Link */
+.reset {
+  font-size: 14px;
+  color: #717171;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-bottom: 32px;
+  text-align: left;
+  transition: color 0.2s ease;
+}
+
+.reset:hover {
+  color: #222;
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  background: linear-gradient(to right, #ff5a5f, #e91e63);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-button:hover {
+  background: linear-gradient(to right, #e91e63, #D70466);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.login-button:active {
+  transform: translateY(0);
+}
+
+.login-button p {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Loading State */
+.login-button:disabled {
+  background: #b0b0b0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Form Divider */
+.form-divider {
+  display: flex;
+  align-items: center;
+  margin: 32px 0;
+  color: #717171;
+  font-size: 14px;
+}
+
+.form-divider::before,
+.form-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ebebeb;
+}
+
+.form-divider span {
+  padding: 0 16px;
+}
+
+/* Alternative Actions */
+.alternative-actions {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.alternative-actions p {
+  font-size: 14px;
+  color: #717171;
+  margin-bottom: 16px;
+}
+
+.alternative-actions button {
+  background: white;
+  color: #222;
+  border: 1px solid #b0b0b0;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.alternative-actions button:hover {
+  border-color: #222;
+  background: #f7f7f7;
+}
+
+/* Error Messages */
+.error-message {
+  background: #FFF4F4;
+  border: 1px solid #FFB3B3;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  color: #C53030;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Success Messages */
+.success-message {
+  background: #F0FFF4;
+  border: 1px solid #9AE6B4;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+  color: #38A169;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 24px;
+    max-width: none;
+  }
+
+  .login-form form {
+    padding: 24px;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  .login-form h1 {
+    font-size: 28px;
+  }
+
+  .login-header .navbar-link {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .login-form {
+    padding: 16px;
+  }
+
+  .login-form h1 {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .input input {
+    padding: 14px;
+  }
+
+  .login-button {
+    padding: 14px;
+  }
+}

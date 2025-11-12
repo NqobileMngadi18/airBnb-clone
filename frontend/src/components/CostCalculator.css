@@ -1,0 +1,281 @@
+/* 2024 Airbnb Cost Calculator Styles */
+.cost-calculator {
+  background: white;
+  border: 1px solid #ebebeb;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 16px;
+}
+
+/* Calculator Header */
+.calculator-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.price-display {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+}
+
+.price-period {
+  font-size: 16px;
+  color: #717171;
+}
+
+.rating {
+  font-size: 14px;
+  color: #222;
+  font-weight: 500;
+}
+
+/* Form Styles */
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.date-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border: 1px solid #b0b0b0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.date-input {
+  position: relative;
+}
+
+.date-input:first-child {
+  border-right: 1px solid #b0b0b0;
+}
+
+.date-input label {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+.date-input input {
+  width: 100%;
+  padding: 26px 12px 10px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #222;
+}
+
+.date-input input:focus {
+  outline: 2px solid #222;
+  outline-offset: -2px;
+}
+
+.guests-input {
+  border: 1px solid #b0b0b0;
+  border-radius: 8px;
+  position: relative;
+}
+
+.guests-input label {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #222;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+}
+
+.guests-input select {
+  width: 100%;
+  padding: 26px 12px 10px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #222;
+  appearance: none;
+  cursor: pointer;
+}
+
+.guests-input select:focus {
+  outline: 2px solid #222;
+  outline-offset: -2px;
+}
+
+/* Reserve Button */
+.reserve-button {
+  background: linear-gradient(to right, #ff5a5f, #e91e63);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.reserve-button:hover:not(:disabled) {
+  background: linear-gradient(to right, #e91e63, #D70466);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.reserve-button:disabled {
+  background: #b0b0b0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.reserve-button.requires-login {
+  background: #ff5a5f;
+}
+
+.login-notice {
+  text-align: center;
+  font-size: 14px;
+  color: #717171;
+  margin: 8px 0 0 0;
+}
+
+.no-charge-message {
+  text-align: center;
+  font-size: 14px;
+  color: #717171;
+  margin: 0;
+}
+
+/* Cost Breakdown */
+.cost-breakdown {
+  border-top: 1px solid #ebebeb;
+  padding-top: 16px;
+  margin-top: 16px;
+}
+
+.breakdown-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  color: #222;
+  cursor: pointer;
+  margin-bottom: 16px;
+}
+
+.breakdown-toggle:hover {
+  opacity: 0.8;
+}
+
+.arrow {
+  font-size: 12px;
+  transition: transform 0.2s ease;
+}
+
+.arrow.up {
+  transform: rotate(180deg);
+}
+
+.breakdown-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.cost-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #222;
+  cursor: pointer;
+}
+
+.cost-item.discount {
+  color: #00a699;
+}
+
+.cost-item.total {
+  font-weight: 600;
+  font-size: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #ebebeb;
+}
+
+.show-breakdown {
+  background: none;
+  border: none;
+  color: #222;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.total-cost {
+  padding-top: 16px;
+  border-top: 1px solid #ebebeb;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cost-calculator {
+    position: static;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cost-calculator {
+    margin-left: -16px;
+    margin-right: -16px;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+
+  .calculator-header {
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .date-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .date-input:first-child {
+    border-right: none;
+    border-bottom: 1px solid #b0b0b0;
+  }
+}

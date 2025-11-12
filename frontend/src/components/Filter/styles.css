@@ -1,0 +1,60 @@
+/* Modern Filter Component Styles */
+.filter-div {
+  border-top: 1px solid var(--border-light);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+  background: var(--white);
+}
+
+.links-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: var(--spacing-xl);
+  opacity: 0.6;
+  border-bottom: 2px solid transparent;
+  min-width: 85px;
+  padding: var(--spacing-sm) 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.links-box:hover,
+.selected-box {
+  opacity: 1;
+  border-bottom-color: var(--black);
+}
+
+.links-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-bottom: var(--spacing-xs);
+}
+
+.links-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--dark-grey);
+  text-align: center;
+}
+
+.selected-label {
+  color: var(--black);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .filter-div {
+    padding: var(--spacing-md);
+  }
+
+  .links-box {
+    margin-right: var(--spacing-lg);
+    min-width: 70px;
+  }
+}

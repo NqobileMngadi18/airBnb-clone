@@ -1,0 +1,360 @@
+/* 2024 Airbnb Location Page Styles */
+.location-page {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+/* Loading State */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: var(--spacing-lg);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--super-light-grey);
+  border-top: 3px solid var(--airbnb-red);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  gap: var(--spacing-lg);
+}
+
+.error-container h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0;
+}
+
+.error-container p {
+  font-size: 16px;
+  color: var(--dark-grey);
+  margin: 0;
+}
+
+.error-container button {
+  background: var(--airbnb-red);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.error-container button:hover {
+  background: var(--airbnb-red-dark);
+}
+
+/* Location Content */
+.location-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.location-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.location-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: var(--spacing-sm);
+}
+
+.location-header p {
+  font-size: 16px;
+  color: var(--dark-grey);
+  margin: 0;
+}
+
+/* Filters */
+.location-filters {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-2xl);
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.filter-tabs {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.filter-tab {
+  background: none;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--dark-grey);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.filter-tab:hover,
+.filter-tab.active {
+  color: var(--black);
+  border-bottom-color: var(--black);
+}
+
+.filter-controls {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.filter-select {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  background: var(--white);
+  cursor: pointer;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--black);
+}
+
+/* Listings Grid */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.listing-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.listing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.listing-image-container {
+  position: relative;
+  width: 100%;
+  height: 250px;
+}
+
+.listing-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.favorite-btn {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: var(--radius-full);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.favorite-btn:hover {
+  background: var(--white);
+  transform: scale(1.1);
+}
+
+/* Listing Info */
+.listing-info {
+  padding: var(--spacing-lg);
+}
+
+.listing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.listing-type {
+  font-size: 14px;
+  color: var(--dark-grey);
+  font-weight: 500;
+}
+
+.listing-rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: var(--black);
+  font-weight: 500;
+}
+
+.listing-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0 0 var(--spacing-xs) 0;
+  line-height: 1.3;
+}
+
+.listing-location {
+  font-size: 14px;
+  color: var(--dark-grey);
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.listing-details {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 14px;
+  color: var(--dark-grey);
+  margin-bottom: var(--spacing-md);
+}
+
+.listing-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-lg);
+}
+
+.amenity-tag {
+  background: var(--super-light-grey);
+  color: var(--dark-grey);
+  padding: 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.listing-price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-xs);
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.price-period {
+  font-size: 14px;
+  color: var(--dark-grey);
+}
+
+/* No Listings State */
+.no-listings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 40vh;
+  text-align: center;
+  gap: var(--spacing-md);
+}
+
+.no-listings h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0;
+}
+
+.no-listings p {
+  font-size: 16px;
+  color: var(--dark-grey);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .location-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .listings-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .location-header h1 {
+    font-size: 28px;
+  }
+
+  .location-filters {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    align-items: stretch;
+  }
+
+  .filter-tabs {
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+  }
+
+  .filter-tab {
+    white-space: nowrap;
+  }
+
+  .listings-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .listing-image-container {
+    height: 200px;
+  }
+}
+
+@media (max-width: 640px) {
+  .location-content {
+    padding: var(--spacing-md);
+  }
+
+  .location-header h1 {
+    font-size: 24px;
+  }
+
+  .listing-info {
+    padding: var(--spacing-md);
+  }
+}
