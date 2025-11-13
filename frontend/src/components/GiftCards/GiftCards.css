@@ -1,13 +1,13 @@
 .gift-cards {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
-    padding: 64px 80px;
+    /* padding: 64px 80px; */
     background-color: #F7F7F7;
-    margin: 64px 0;
-    max-width: 2520px;
-    margin-left: auto;
-    margin-right: auto;
+    /* margin: 64px 0; */
+    /* max-width: 2520px; */
+    /* margin-left: auto;
+    margin-right: auto; */
     border-radius: 16px;
 }
 
@@ -49,6 +49,7 @@
 
 .gift-cards-images img {
     width: 100%;
+    margin-right: 20px;
     max-width: 550px;
     height: auto;
     object-fit: cover;

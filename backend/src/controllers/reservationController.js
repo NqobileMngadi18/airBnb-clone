@@ -2,6 +2,7 @@ const Reservation = require("../models/Reservation");
 const mongoose = require("mongoose");
 const Accommodation = require("../models/Accommodation");
 const { validationResult } = require("express-validator");
+const auth = require("../middleware/auth");
 
 // Get all reservations
 exports.getAllReservations = async (req, res) => {

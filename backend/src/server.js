@@ -7,21 +7,27 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Correct import
 const userRoutes = require('./routes/userRoutes');
 const reservationRoutes = require('./routes/reservationRoutes');
-const accomodationRoutes = require('./routes/accommodationRoutes');
+const accommodationRoutes = require('./routes/accommodationRoutes');
 
 // MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
-.then(() => {
+  .then(() => {
     console.log('Connected successfully to MongoDB');
-    const PORT = process.env.PORT || 5000;
+    const PORT = process.env.PORT || 5001;
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-})
-.catch((err) => console.error('Could not connect to MongoDB:', err));
+  })
+  .catch((err) => console.error('Could not connect to MongoDB:', err));
 
 // Routes
 app.use('/api/users', userRoutes);
 app.use('/api/reservations', reservationRoutes);
-app.use('/api/accomodations', accomodationRoutes);
-// app.use('/api/listings', listingRoutes); // (when you extract listings into its own route)
+app.use('/api/accommodations', accommodationRoutes);
+
+// Api tester
+
+app.get( '/api/test', (req, res)=> res.json({ message: 'API is working properly' }) );
+// Remove this line for now unless you have a listingRoutes file:
+/// app.use('/api/listings', listingRoutes);

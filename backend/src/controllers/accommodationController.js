@@ -1,6 +1,6 @@
 const Accommodation = require("../models/Accommodation");
 const express = require("express");
-const router = express.Router
+const router = express.Router();
 const { validationResult } = require("express-validator");
 
 // Get all accommodations

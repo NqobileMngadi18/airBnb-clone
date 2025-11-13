@@ -53,13 +53,16 @@ function LocationDetailsPage() {
             try {
                 // Example payload, adjust as needed
                 const payload = {
-                    accomodationId: '68e98847265bffa1c6fafde2',
+                    accommodationId: '68e98847265bffa1c6fafde2',
                     startDate: '2024-05-20',
                     endDate: '2024-05-21',
                     user: user,
                     // Add other reservation details here
                 };
-                await axios.post('/reservations/', payload);
+                const token = localStorage.getItem('token');
+                await axios.post('/reservations', payload,
+                  { headers: { Authorization: `Bearer ${token}`}, }
+                );
                 // On success, redirect to confirmation page
                 navigate('/reservation-success');
             } catch (error) {
