@@ -1,0 +1,28 @@
+/* Modern Mobile Search Bar Styles */
+.mobile-search-bar {
+  display: none;
+  padding: var(--spacing-md);
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.mobile-search-input {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-full);
+  font-size: 16px;
+  background: var(--super-light-grey);
+}
+
+.mobile-search-input:focus {
+  outline: none;
+  border-color: var(--black);
+  background: var(--white);
+}
+
+@media (max-width: 768px) {
+  .mobile-search-bar {
+    display: block;
+  }
+}

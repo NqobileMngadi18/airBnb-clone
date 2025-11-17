@@ -1,0 +1,429 @@
+/* 2024 Airbnb Location Details Page Styles */
+.location-details-page {
+  min-height: 100vh;
+  background: var(--white);
+}
+
+/* Loading and Error States */
+.loading-container,
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: var(--spacing-lg);
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--super-light-grey);
+  border-top: 3px solid var(--airbnb-red);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Details Content */
+.details-content {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+/* Property Header */
+.property-header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.property-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.2;
+}
+
+.property-subtitle {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 14px;
+  color: var(--dark-grey);
+  flex-wrap: wrap;
+}
+
+.property-rating {
+  color: var(--black);
+  font-weight: 600;
+}
+
+.property-reviews {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.property-location {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* Image Gallery */
+.image-gallery-container {
+  margin-bottom: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  height: 400px;
+}
+
+/* Main Content Layout */
+.main-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-2xl);
+}
+
+.content-left {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.content-right {
+  position: sticky;
+  top: var(--spacing-lg);
+  height: fit-content;
+}
+
+/* Property Overview */
+.property-overview h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--spacing-sm);
+}
+
+.property-specs {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: 16px;
+  color: var(--dark-grey);
+}
+
+/* Property Features */
+.property-features {
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: var(--spacing-xl) 0;
+}
+
+.feature-item {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
+}
+
+.feature-item:last-child {
+  margin-bottom: 0;
+}
+
+.feature-icon {
+  font-size: 24px;
+  width: 40px;
+  text-align: center;
+}
+
+.feature-content h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--spacing-xs);
+}
+
+.feature-content p {
+  font-size: 14px;
+  color: var(--dark-grey);
+  margin: 0;
+}
+
+/* Description */
+.property-description h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--spacing-lg);
+}
+
+.property-description p {
+  font-size: 16px;
+  color: var(--black);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Sleeping Arrangements */
+.sleeping-arrangements h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--spacing-lg);
+}
+
+.bedroom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.bedroom-card {
+  border: 1px solid var(--border-medium);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.bedroom-icon {
+  font-size: 32px;
+  margin-bottom: var(--spacing-md);
+}
+
+.bedroom-card h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--spacing-xs);
+}
+
+.bedroom-card p {
+  font-size: 14px;
+  color: var(--dark-grey);
+  margin: 0;
+}
+
+/* Amenities */
+.amenities-section h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--spacing-lg);
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-md);
+}
+
+.amenity-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+}
+
+.amenity-icon {
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+}
+
+.amenity-name {
+  font-size: 16px;
+  color: var(--black);
+  text-transform: capitalize;
+}
+
+/* Reviews */
+.reviews-section h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--spacing-lg);
+}
+
+.ratings-breakdown {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.rating-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.rating-category {
+  font-size: 14px;
+  color: var(--black);
+  min-width: 100px;
+}
+
+.rating-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--super-light-grey);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.rating-fill {
+  height: 100%;
+  background: var(--black);
+  transition: width 0.3s ease;
+}
+
+.rating-value {
+  font-size: 14px;
+  color: var(--black);
+  font-weight: 600;
+  min-width: 30px;
+  text-align: right;
+}
+
+/* Host Section */
+.host-section h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--spacing-lg);
+}
+
+.host-card {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+}
+
+.host-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background: var(--airbnb-red);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.host-info h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--spacing-xs);
+}
+
+.host-info p {
+  font-size: 14px;
+  color: var(--dark-grey);
+  margin: 0;
+}
+
+/* Location */
+.location-section h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: var(--spacing-lg);
+}
+
+.location-section p {
+  font-size: 16px;
+  color: var(--black);
+  margin-bottom: var(--spacing-lg);
+}
+
+.map-placeholder {
+  height: 300px;
+  background: var(--super-light-grey);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-light);
+}
+
+.map-placeholder p {
+  color: var(--dark-grey);
+  font-size: 16px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .content-right {
+    position: static;
+    order: -1;
+  }
+
+  .ratings-breakdown {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .details-content {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .property-title {
+    font-size: 24px;
+  }
+
+  .property-subtitle {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-xs);
+  }
+
+  .image-gallery-container {
+    height: 300px;
+    margin-left: calc(-1 * var(--spacing-md));
+    margin-right: calc(-1 * var(--spacing-md));
+    border-radius: 0;
+  }
+
+  .bedroom-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .amenities-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .host-card {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .property-specs {
+    flex-wrap: wrap;
+  }
+
+  .feature-item {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+
+  .feature-icon {
+    align-self: center;
+  }
+}

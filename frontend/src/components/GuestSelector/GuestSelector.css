@@ -1,0 +1,127 @@
+.guest-selector-container {
+  position: relative;
+  flex: 1;
+  display: flex;
+}
+
+.guest-search-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px 24px;
+  cursor: pointer;
+  border-radius: 32px;
+  transition: all 0.2s ease;
+  position: relative;
+  background: transparent;
+}
+
+.guest-search-item:hover {
+  background-color: #f7f7f7;
+}
+
+.guest-selector-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  min-width: 280px;
+  padding: 24px;
+}
+
+.guest-selector-header {
+  margin-bottom: 16px;
+}
+
+.guest-selector-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222;
+}
+
+.guest-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.guest-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.guest-label {
+  font-weight: 500;
+  font-size: 16px;
+  color: #222;
+}
+
+.guest-description {
+  font-size: 14px;
+  color: #717171;
+  margin-top: 4px;
+}
+
+.guest-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.guest-control-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #b0b0b0;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 16px;
+  color: #222;
+  transition: all 0.2s ease;
+}
+
+.guest-control-button:hover {
+  border-color: #222;
+}
+
+.guest-control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ddd;
+}
+
+.guest-count {
+  font-size: 16px;
+  font-weight: 400;
+  min-width: 20px;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .guest-selector-dropdown {
+    width: 300px;
+    right: -16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .guest-selector-dropdown {
+    width: 280px;
+    right: -20px;
+  }
+}

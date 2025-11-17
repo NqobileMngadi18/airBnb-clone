@@ -1,0 +1,117 @@
+.inspiration-getaways {
+    padding: 64px 80px;
+    max-width: 2520px;
+    margin: 0 auto;
+}
+
+.inspiration-getaways h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #222222;
+    margin: 0 0 32px 0;
+}
+
+.tabs-nav {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #DDDDDD;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tab-nav {
+    padding: 12px 0;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #717171;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    position: relative;
+}
+
+.tab-nav:hover {
+    color: #222222;
+    border-bottom-color: #DDDDDD;
+}
+
+.tab-nav.active {
+    color: #222222;
+    border-bottom-color: #222222;
+}
+
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px 32px;
+    margin-top: 24px;
+}
+
+.destination {
+    cursor: pointer;
+}
+
+.city {
+    font-weight: 600;
+    font-size: 15px;
+    color: #222222;
+    margin: 0 0 4px 0;
+    line-height: 20px;
+}
+
+.state {
+    color: #717171;
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 20px;
+}
+
+.destination:hover .city {
+    text-decoration: underline;
+}
+
+.show-more {
+    color: #222222;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 16px;
+    display: inline-block;
+    text-decoration: underline;
+}
+
+.show-more:hover {
+    color: #000000;
+}
+
+@media (max-width: 1024px) {
+    .inspiration-getaways {
+        padding: 48px 40px;
+    }
+
+    .destinations {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .inspiration-getaways {
+        padding: 32px 24px;
+    }
+
+    .inspiration-getaways h1 {
+        font-size: 26px;
+    }
+
+    .tabs-nav {
+        gap: 24px;
+    }
+
+    .destinations {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
